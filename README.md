@@ -18,10 +18,10 @@ with the individual students.
 
 
 ```
-[hxr@leda:~/work/checklistomania]$ bash tmp.sh > email.html
+[hxr@leda:~/work]$ bash tmp.sh > email.html
 Directory **************************** created
 Granted writer permission to user
-[hxr@leda:~/work/checklistomania]$ cat email.html
+[hxr@leda:~/work]$ cat email.html
 <a href="https://drive.google.com/open?id=****************************">Jane Doe</a><br />
 ```
 
