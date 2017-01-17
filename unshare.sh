@@ -14,7 +14,8 @@ function unshare(){
     folders=$(gdrive list  -q '"'$PARENT_FOLDER'" in parents')
     for id in $(echo "$folders" | awk '(NR>1){print $1}');
     do
-        data=$(gdrive share list $id | grep '@tamu.edu' | grep -v -f $parents)
+        # Changing to @tamu.edu selects for emails, tamu.edu selects emails + domain
+        data=$(gdrive share list $id | grep 'tamu.edu' | grep -v -f $parents)
         share_ids=($(echo "$data"|  awk '{print $1}'))
         emails=($(echo "$data"|  awk '{print $4}'))
         #for share_id in $share_ids; do
