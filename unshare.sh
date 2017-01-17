@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #set -ex
-PARENT_FOLDER=****************************
+PARENT_FOLDER=AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 parents=$(mktemp)
 
 gdrive share list $PARENT_FOLDER | grep '@tamu.edu' | awk '{print $4}' > $parents
